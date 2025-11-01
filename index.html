@@ -5,93 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <title>Yogesh Chauhan - AI & Data Science Portfolio</title>
-    <meta name="description" content="Yogesh Chauhan's portfolio showcasing expertise in AI, Data Science, Computer Vision, and Backend Development.">
-    <meta name="keywords" content="AI, Data Science, Computer Vision, Backend Development, Python, Flask, MongoDB, OpenCV, Portfolio">
+    <meta name="description"
+        content="Yogesh Chauhan's portfolio showcasing expertise in AI, Data Science, Computer Vision, and Backend Development.">
+    <meta name="keywords"
+        content="AI, Data Science, Computer Vision, Backend Development, Python, Flask, MongoDB, OpenCV, Portfolio">
     <meta name="theme-color" content="#4F46E5" id="theme-color">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    
+
     <!-- Theme Color Script -->
     <script>
-      // Update theme color based on user preference
-      function updateThemeColor() {
-        const isDarkMode = document.documentElement.classList.contains('dark');
-        const themeColorMeta = document.getElementById('theme-color');
-        if (isDarkMode) {
-          themeColorMeta.setAttribute('content', '#1E293B'); // Dark mode color
-        } else {
-          themeColorMeta.setAttribute('content', '#4F46E5'); // Light mode color
-        }
-      }
-      
-      // Initialize theme color
-      document.addEventListener('DOMContentLoaded', function() {
-        updateThemeColor();
-        
-        // Watch for theme changes
-        const observer = new MutationObserver(function(mutations) {
-          mutations.forEach(function(mutation) {
-            if (mutation.attributeName === 'class') {
-              updateThemeColor();
+        // Update theme color based on user preference
+        function updateThemeColor() {
+            const isDarkMode = document.documentElement.classList.contains('dark');
+            const themeColorMeta = document.getElementById('theme-color');
+            if (isDarkMode) {
+                themeColorMeta.setAttribute('content', '#1E293B'); // Dark mode color
+            } else {
+                themeColorMeta.setAttribute('content', '#4F46E5'); // Light mode color
             }
-          });
+        }
+
+        // Initialize theme color
+        document.addEventListener('DOMContentLoaded', function () {
+            updateThemeColor();
+
+            // Watch for theme changes
+            const observer = new MutationObserver(function (mutations) {
+                mutations.forEach(function (mutation) {
+                    if (mutation.attributeName === 'class') {
+                        updateThemeColor();
+                    }
+                });
+            });
+
+            observer.observe(document.documentElement, { attributes: true });
         });
-        
-        observer.observe(document.documentElement, { attributes: true });
-      });
     </script>
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yogeshchauhan.com/">
     <meta property="og:title" content="Yogesh Chauhan - AI & Data Science Portfolio">
-    <meta property="og:description" content="Yogesh Chauhan's portfolio showcasing expertise in AI, Data Science, Computer Vision, and Backend Development.">
+    <meta property="og:description"
+        content="Yogesh Chauhan's portfolio showcasing expertise in AI, Data Science, Computer Vision, and Backend Development.">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://yogeshchauhan.com/">
     <meta name="twitter:title" content="Yogesh Chauhan - AI & Data Science Portfolio">
-    <meta name="twitter:description" content="Yogesh Chauhan's portfolio showcasing expertise in AI, Data Science, Computer Vision, and Backend Development.">
+    <meta name="twitter:description"
+        content="Yogesh Chauhan's portfolio showcasing expertise in AI, Data Science, Computer Vision, and Backend Development.">
 
     <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
     <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
-    
+
     <!-- Data Visualization Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-    
+
     <!-- Animation Libraries -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    
-    <!-- Modern Font -->
+
+    <!-- Modern Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- EmailJS for contact form functionality -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
-      (function() {
-        // Initialize EmailJS with your public key
-        emailjs.init("EmyjwMPqNA3YaK6xO");
-      })();
+        (function () {
+            // Initialize EmailJS with your public key
+            emailjs.init("EmyjwMPqNA3YaK6xO");
+        })();
     </script>
-    
+
     <!-- Initialize AOS animations -->
     <script type="text/javascript">
-      document.addEventListener('DOMContentLoaded', function() {
-        AOS.init({
-          duration: 800,
-          easing: 'ease-in-out',
-          once: true
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
         });
-      });
     </script>
 
     <!-- Predefined Tailwind CSS, use it as needed, or update base on your -->
@@ -118,8 +124,9 @@
             --transition-speed: 0.3s;
             
             /* Font settings */
-            --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-heading: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-body: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-logo: 'Poppins', sans-serif;
         }
         
         .dark {
@@ -204,10 +211,34 @@
 
     @layer components {
         .btn-primary {
-            @apply px-6 py-2 sm:px-8 sm:py-3 bg-[var(--accent-color)] text-white font-medium tracking-wide hover:bg-opacity-90 transition-all duration-200 rounded-lg shadow-md hover:shadow-lg text-sm sm:text-base flex items-center justify-center gap-2;
+            padding: 0.5rem 1.5rem;
+            background-color: var(--accent-color);
+            color: white;
+            font-weight: 500;
+            letter-spacing: 0.025em;
+            transition: all 0.2s;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
             position: relative;
             overflow: hidden;
             z-index: 1;
+        }
+        
+        @media (min-width: 640px) {
+            .btn-primary {
+                padding: 0.75rem 2rem;
+                font-size: 1rem;
+            }
+        }
+        
+        .btn-primary:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            opacity: 0.9;
         }
         
         .btn-primary::after {
@@ -227,32 +258,134 @@
         }
         
         .btn-secondary {
-            @apply px-6 py-2 sm:px-8 sm:py-3 border-2 border-[var(--accent-color)] text-[var(--accent-color)] font-medium tracking-wide hover:bg-[var(--accent-color)] hover:text-white transition-all duration-200 rounded-lg text-sm sm:text-base flex items-center justify-center gap-2;
+            padding: 0.5rem 1.5rem;
+            border: 2px solid var(--accent-color);
+            color: var(--accent-color);
+            font-weight: 500;
+            letter-spacing: 0.025em;
+            transition: all 0.2s;
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        @media (min-width: 640px) {
+            .btn-secondary {
+                padding: 0.75rem 2rem;
+                font-size: 1rem;
+            }
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--accent-color);
+            color: white;
         }
         
         .btn-outline {
-            @apply px-4 py-1 sm:px-6 sm:py-2 border border-[var(--border-color)] text-[var(--text-secondary)] font-medium hover:border-[var(--accent-color)] hover:text-[var(--accent-color)] transition-all duration-200 rounded-lg text-xs sm:text-sm;
+            padding: 0.25rem 1rem;
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: all 0.2s;
+            border-radius: 0.5rem;
+            font-size: 0.75rem;
+        }
+        
+        @media (min-width: 640px) {
+            .btn-outline {
+                padding: 0.5rem 1.5rem;
+                font-size: 0.875rem;
+            }
+        }
+        
+        .btn-outline:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
         }
         
         .section-padding {
-            @apply py-16 sm:py-20 lg:py-24 px-4 sm:px-6;
+            padding: 4rem 1rem;
+        }
+        
+        @media (min-width: 640px) {
+            .section-padding {
+                padding: 5rem 1.5rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .section-padding {
+                padding: 6rem 1.5rem;
+            }
         }
         
         .section-title {
-            @apply text-4xl sm:text-5xl lg:text-6xl font-black mb-4 sm:mb-6 uppercase tracking-wider;
+            font-size: 2.25rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
             background: linear-gradient(135deg, var(--accent-color), var(--accent-tertiary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
         
+        @media (min-width: 640px) {
+            .section-title {
+                font-size: 3rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .section-title {
+                font-size: 3.75rem;
+            }
+        }
+        
         .section-subtitle {
-            @apply text-lg sm:text-xl text-[var(--text-secondary)] max-w-3xl mx-auto leading-relaxed;
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 48rem;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.625;
+        }
+        
+        @media (min-width: 640px) {
+            .section-subtitle {
+                font-size: 1.25rem;
+            }
         }
         
         .card {
-            @apply bg-[var(--background-card)] p-4 sm:p-6 lg:p-8 border border-[var(--border-color)] hover:border-[var(--accent-color)] transition-all duration-300 rounded-xl shadow-sm hover:shadow-md;
+            background-color: var(--background-card);
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
             transition: background-color var(--transition-speed), border-color var(--transition-speed), transform var(--transition-speed), box-shadow var(--transition-speed);
+        }
+        
+        @media (min-width: 640px) {
+            .card {
+                padding: 1.5rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .card {
+                padding: 2rem;
+            }
+        }
+        
+        .card:hover {
+            border-color: var(--accent-color);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
         
         .card:hover {
@@ -260,9 +393,19 @@
         }
         
         .data-card {
-            @apply bg-[var(--background-card)] p-4 sm:p-6 border border-[var(--border-color)] rounded-xl shadow-sm;
+            background-color: var(--background-card);
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
             position: relative;
             overflow: hidden;
+        }
+        
+        @media (min-width: 640px) {
+            .data-card {
+                padding: 1.5rem;
+            }
         }
         
         .data-card::before {
@@ -280,7 +423,8 @@
         }
         
         .light-header {
-            @apply backdrop-blur-xl border-b border-[var(--border-color)];
+            backdrop-filter: blur(24px);
+            border-bottom: 1px solid var(--border-color);
             background-color: rgba(255, 255, 255, 0.8);
             transition: background-color 0.3s ease;
         }
@@ -290,7 +434,10 @@
         }
         
         .glass-card {
-            @apply backdrop-blur-md border border-white/20 rounded-xl shadow-lg;
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             background-color: rgba(255, 255, 255, 0.1);
         }
         
@@ -299,10 +446,19 @@
         }
         
         .skill-tag {
-            @apply px-3 py-1 text-xs sm:text-sm rounded-full transition-all duration-200;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.75rem;
+            border-radius: 9999px;
+            transition: all 0.2s;
             background-color: rgba(var(--accent-color), 0.1);
             color: var(--accent-color);
             border: 1px solid rgba(var(--accent-color), 0.2);
+        }
+        
+        @media (min-width: 640px) {
+            .skill-tag {
+                font-size: 0.875rem;
+            }
         }
         
         .skill-tag:hover {

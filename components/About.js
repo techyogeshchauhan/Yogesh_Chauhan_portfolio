@@ -3,97 +3,99 @@ function About() {
     return (
       <section
         id="about"
-        className="section-padding bg-[var(--primary-color)] px-4 sm:px-6 py-16 sm:py-20"
+        className="section-padding bg-[var(--background-dark)]"
         data-name="about"
         data-file="components/About.js"
       >
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 sm:mb-20">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[var(--text-primary)] mb-4 sm:mb-6 uppercase tracking-wider">
-              About Me
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-16" data-aos="fade-up">
+            <h2 className="text-5xl sm:text-6xl font-black mb-4" style={{fontFamily: 'var(--font-heading)'}}>
+              <span className="bg-gradient-to-r from-[var(--accent-color)] to-[var(--accent-tertiary)] bg-clip-text text-transparent">
+                About Me
+              </span>
             </h2>
-            <div className="w-24 sm:w-32 h-1 bg-[var(--accent-color)] mx-auto mb-6 sm:mb-8"></div>
-            <p className="text-lg sm:text-xl text-[var(--text-secondary)] max-w-3xl mx-auto leading-relaxed px-2">
-              Hi, I'm Yogesh Chauhan — an AI & Data Science student with a passion
-              for building intelligent, impactful web applications. I work with Python,
-              Flask, MongoDB, and OpenCV, and enjoy turning ideas into useful solutions.
-              I'm always learning and driven to create tech that makes a difference.
+            <div className="w-24 h-1.5 bg-gradient-to-r from-[var(--accent-color)] to-[var(--accent-tertiary)] mx-auto mb-6 rounded-full"></div>
+            <p className="text-xl text-[var(--text-secondary)] max-w-3xl mx-auto" style={{fontFamily: 'var(--font-body)'}}>
+              Passionate about transforming complex data into actionable insights
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start md:items-center">
-            <div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-4 sm:mb-8">My Story</h3>
-              <p className="text-sm sm:text-base text-[var(--text-secondary)] mb-4 sm:mb-6 leading-relaxed">
-                My journey started with a curiosity for how computers think and
-                learn. Now, I focus on creating AI and web projects that solve
-                real-world problems, blending creativity with technical precision.
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Side */}
+            <div data-aos="fade-right">
+              <h3 className="text-3xl font-bold mb-6 text-[var(--text-primary)]" style={{fontFamily: 'var(--font-heading)'}}>
+                My Journey
+              </h3>
+              <p className="text-lg text-[var(--text-secondary)] mb-6 leading-relaxed" style={{fontFamily: 'var(--font-body)'}}>
+                I'm an AI & Data Science enthusiast with a passion for building intelligent solutions. 
+                My journey started with curiosity about how machines learn, and now I specialize in 
+                creating AI-powered applications that solve real-world problems.
               </p>
-              <p className="text-sm sm:text-base text-[var(--text-secondary)] mb-6 sm:mb-8 leading-relaxed">
-                Every project is a chance to innovate, learn, and make an impact.
-                I believe in clean code, user-friendly design, and practical
-                innovation.
+              <p className="text-lg text-[var(--text-secondary)] mb-8 leading-relaxed" style={{fontFamily: 'var(--font-body)'}}>
+                I work with cutting-edge technologies like Python, TensorFlow, OpenCV, and Flask to 
+                build scalable machine learning models and computer vision systems.
               </p>
 
-              <div className="grid grid-cols-2 gap-4 sm:gap-6">
-                <div className="text-center card">
-                  <div className="text-4xl font-bold text-[var(--accent-color)] mb-2">50+</div>
-                  <div className="text-[var(--text-secondary)] font-medium">Projects</div>
-                </div>
-                <div className="text-center card">
-                  <div className="text-4xl font-bold text-[var(--accent-color)] mb-2">3+</div>
-                  <div className="text-[var(--text-secondary)] font-medium">Years</div>
-                </div>
+              <div className="grid grid-cols-2 gap-6">
+                {[
+                  { value: "50+", label: "Projects Completed", icon: "folder" },
+                  { value: "3+", label: "Years Experience", icon: "calendar" }
+                ].map((stat, idx) => (
+                  <div key={idx} className="p-6 bg-[var(--background-card)] border border-[var(--border-color)] rounded-2xl hover:border-[var(--accent-color)] hover:scale-105 transition-all duration-300">
+                    <div className={`icon-${stat.icon} text-3xl text-[var(--accent-color)] mb-3`}></div>
+                    <div className="text-4xl font-bold text-[var(--accent-color)] mb-2" style={{fontFamily: 'var(--font-heading)'}}>
+                      {stat.value}
+                    </div>
+                    <div className="text-sm text-[var(--text-secondary)]" style={{fontFamily: 'var(--font-body)'}}>
+                      {stat.label}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
 
-            <div className="mt-8 md:mt-0">
-              <h3 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-4 sm:mb-8">What I Do</h3>
-              <div className="space-y-4 sm:space-y-6">
-                <div className="card">
-                  <div className="flex items-start space-x-3 sm:space-x-4">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[var(--accent-color)] flex items-center justify-center shadow-lg rounded-full hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                      <div className="icon-brain text-2xl sm:text-3xl text-[var(--text-primary)]"></div>
-                    </div>
-                    <div>
-                      <h4 className="text-base sm:text-lg font-semibold text-[var(--text-primary)] mb-1 sm:mb-2">AI Development</h4>
-                      <p className="text-sm sm:text-base text-[var(--text-secondary)]">
-                        Building smart applications using machine learning and computer vision
-                        to understand and assist users.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="card">
-                  <div className="flex items-start space-x-3 sm:space-x-4">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[var(--accent-color)] flex items-center justify-center shadow-lg rounded-full hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                      <div className="icon-code text-2xl sm:text-3xl text-[var(--text-primary)]"></div>
-                    </div>
-                    <div>
-                      <h4 className="text-base sm:text-lg font-semibold text-[var(--text-primary)] mb-1 sm:mb-2">Backend Development</h4>
-                      <p className="text-sm sm:text-base text-[var(--text-secondary)]">
-                        Designing APIs and server-side systems for AI-powered apps with a focus
-                        on scalability and reliability.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="card">
-                  <div className="flex items-start space-x-3 sm:space-x-4">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[var(--accent-color)] flex items-center justify-center shadow-lg rounded-full hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                      <div className="icon-chart-bar text-2xl sm:text-3xl text-[var(--text-primary)]"></div>
-                    </div>
-                    <div>
-                      <h4 className="text-base sm:text-lg font-semibold text-[var(--text-primary)] mb-1 sm:mb-2">AI & Data Science Student</h4>
-                      <p className="text-sm sm:text-base text-[var(--text-secondary)]">
-                        Exploring machine learning, computer vision, and data analytics to
-                        build innovative solutions and gain deep insights from data.
-                      </p>
+            {/* Right Side */}
+            <div data-aos="fade-left">
+              <h3 className="text-3xl font-bold mb-6 text-[var(--text-primary)]" style={{fontFamily: 'var(--font-heading)'}}>
+                What I Do
+              </h3>
+              <div className="space-y-6">
+                {[
+                  {
+                    icon: "brain",
+                    title: "AI & Machine Learning",
+                    desc: "Building intelligent systems using deep learning, neural networks, and advanced ML algorithms",
+                    color: "accent-color"
+                  },
+                  {
+                    icon: "eye",
+                    title: "Computer Vision",
+                    desc: "Developing real-time object detection, image recognition, and video analysis solutions",
+                    color: "accent-tertiary"
+                  },
+                  {
+                    icon: "server",
+                    title: "Backend Development",
+                    desc: "Creating scalable APIs and server-side systems with Flask, MongoDB, and cloud technologies",
+                    color: "accent-secondary"
+                  }
+                ].map((service, idx) => (
+                  <div key={idx} className="p-6 bg-[var(--background-card)] border border-[var(--border-color)] rounded-2xl hover:border-[var(--accent-color)] hover:scale-105 transition-all duration-300 group">
+                    <div className="flex items-start gap-4">
+                      <div className={`w-14 h-14 bg-gradient-to-br from-[var(--${service.color})] to-[var(--accent-tertiary)] rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
+                        <div className={`icon-${service.icon} text-2xl text-white`}></div>
+                      </div>
+                      <div>
+                        <h4 className="text-xl font-bold text-[var(--text-primary)] mb-2" style={{fontFamily: 'var(--font-heading)'}}>
+                          {service.title}
+                        </h4>
+                        <p className="text-[var(--text-secondary)]" style={{fontFamily: 'var(--font-body)'}}>
+                          {service.desc}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
